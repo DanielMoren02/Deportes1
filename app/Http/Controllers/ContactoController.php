@@ -40,8 +40,64 @@ class ContactoController extends Controller
      */
     public function store(Request $request)
     {
+        $rules=[
+            'nombre' => 'required|min:3',
+            'nombre' => 'required|regex:/[a-zA-ZñÑáéíóúÁÉÍÓÚ]/i',
+            'apellido' => 'required|regex:/[a-zA-ZñÑáéíóúÁÉÍÓÚ]/i',
+            'apellido' => 'required|min:3',
+            'telefono' => 'required|digits:10',
+            'telefono' => 'required|regex:/[0-9]/i',
+            'correo' => 'required|email',
+
+            // Validacion de campos de tarjeta
+            'nombretar' => 'required|min:3',
+            'nombretar' => 'required|regex:/[a-zA-ZñÑáéíóúÁÉÍÓÚ]/i',
+            'numtar' => 'required|max:16',
+            'numtar' => 'required|min:16',
+            'numtar' => 'required|regex:/[0-9]/i',
+            'fechaexp' => 'required|regex:/[0-9]/i',
+            'fechaexp' => 'required|max:5',
+            'fechaexp' => 'required|min:5',
+            'cvv' => 'required|max:3',
+            'cvv' => 'required|min:3',
+            'cvv' => 'required|regex:/[0-9]/i'
+        ];
+
+        $messages = [
+            'nombre.required' => 'Ingrese el nombre',
+            'nombre.min' => 'El nombre necesita tener por lo menos 3 letras',
+            'nombre.regex' => 'El nombre no permite caracteres especiales',
+            'apellido.regex' => 'El apellido no permite caracteres especiales',
+            'apellido.required' => 'Ingrese el apellido',
+            'apellido.min' => 'El apellido necesita tener por lo menos 3 letras',
+            'correo.required' => 'Ingrese el correo electrónico',
+            'correo.email' => 'Ingrese un correo válido',
+            'telefono.required' => 'Ingrese su número de celular',
+            'telefono.digits' => 'El celular debe ser de 10 digitos',
+            'telefono.regex' => 'El celular debe contener solo números',
+
+            // Mensajes de campos de tarjeta
+            'nombretar.required' => 'Ingrese el nombre del propietario de la tarjeta',
+            'nombretar.min' => 'El nombre necesita tener por lo menos 3 letras',
+            'nombretar.regex' => 'El nombre de la tarjeta no permite caracteres especiales',
+            'numtar.required' => 'Ingrese el numero de tarjeta',
+            'numtar.max' => 'El numero de tarjeta debe de ser de 16 digitos',
+            'numtar.min' => 'El numero de tarjeta debe de ser de 16 digitos',
+            'numtar.regex' => 'El numero de tarjeta debe de ser solo numeros',
+            'fechaexp.required' => 'Ingrese la fecha de expiracion',
+            'fechaexp.max' => 'La fecha de expiracion no puede ser de mas de 5 digitos',
+            'fechaexp.min' => 'La fecha de expiracion no puede ser de menos de 5 digitos',
+            'cvv.required' => 'Ingrese su cvv',
+            'cvv.max' => 'El CVV no puede ser de mas de 3 digitos',
+            'cvv.min' => 'El CVV no puede ser de menos de 3 digitos',
+            'cvv.regex' => 'El CVV deben de ser solo numeros',
+        ];
+
+        $this->validate($request, $rules, $messages);
+
+
         $publicKey = file_get_contents(storage_path('app/public.pem'));
- 
+
         $contacto = new Contacto;
         $contacto->nombre = $request->input('nombre');
         $contacto->apellido = $request->input('apellido');
