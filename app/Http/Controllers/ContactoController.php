@@ -40,6 +40,7 @@ class ContactoController extends Controller
      */
     public function store(Request $request)
     {
+
         $rules=[
             'nombre' => 'required|min:3',
             'nombre' => 'required|regex:/[a-zA-ZñÑáéíóúÁÉÍÓÚ]/i',
@@ -97,7 +98,7 @@ class ContactoController extends Controller
 
 
         $publicKey = file_get_contents(storage_path('app/public.pem'));
-
+ 
         $contacto = new Contacto;
         $contacto->nombre = $request->input('nombre');
         $contacto->apellido = $request->input('apellido');

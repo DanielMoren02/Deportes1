@@ -3,200 +3,164 @@
 @section('content')
 @section('title','Inicio')
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <body class="d-flex flex-column h-100">
-        <!-- Product section-->
-        <section class="py-5">
-            <div class="container px-4 px-lg-5 my-5">
-                <div class="row gx-4 gx-lg-5 align-items-center">
-                    <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="{{url('img/nike.jpg')}}" alt="..." /></div>
-                    <div class="col-md-6">
-                        <div class="small mb-1">SKU: BST-498</div>
-                        <h1 class="display-5 fw-bolder">Nike Air Jordan 1</h1>
-                        <div class="fs-5 mb-5">
-                            <span class="text-decoration-line-through">$7000</span>
-                            <span>$5000.00</span>
-                        </div>
-                        <p class="lead">Nike Air Jordan 1 Mid 'Panda' Negro Blanco DV0991-101 Tallas para Mujer Totalmente Nuevas</p>
-                        <div class="d-flex">
-                            <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
-                            <button class="btn btn-outline-dark flex-shrink-0" type="button">
-                                <i class="bi-cart-fill me-1"></i>
-                                Añadir al carrito
-                            </button>
-                        </div>
+    <!-- Product section -->
+    <section class="py-5">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="row gx-4 gx-lg-5 align-items-center">
+                <div class="col-md-6">
+                    <img class="img-fluid" src="{{url('img/nike.jpg')}}" alt="Nike Air Jordan 1">
+                </div>
+                <div class="col-md-6">
+                    <div class="small mb-1">SKU: BST-498</div>
+                    <h1 class="display-5 fw-bolder">Nike Air Jordan 1</h1>
+                    <div class="fs-5 mb-5">
+                        <span class="text-decoration-line-through">$7000</span>
+                        <span>$5000.00</span>
+                    </div>
+                    <p class="lead">Nike Air Jordan 1 Mid 'Panda' Negro Blanco DV0991-101 Tallas para Mujer Totalmente Nuevas</p>
+                    <div class="d-flex">
+                        <input class="form-control text-center me-3" id="inputQuantity" type="number" value="1" style="max-width: 3rem" />
+                        <button class="btn btn-outline-dark flex-shrink-0" type="button">
+                            <i class="bi-cart-fill me-1"></i>
+                            Añadir al carrito
+                        </button>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Related items section-->
-
-        <section class="py-5 bg-light">
-            <div class="container px-4 px-lg-5 mt-5">
-                <h2 class="fw-bolder mb-4">Related products</h2>
-                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                    <div class="col mb-5"> 
-                        <div class="card">
-                            <div class="card-img"></div>
-                            <div class="card-info">
-                              <p class="text-title">Product title </p>
-                              <p class="text-body">Product description and details</p>
-                            </div>
-                            <div class="card-footer">
-                            <span class="text-title">$499.49</span>
-                            <div class="card-button">
-                              <svg class="svg-icon" viewBox="0 0 20 20">
-                                <path d="M17.72,5.011H8.026c-0.271,0-0.49,0.219-0.49,0.489c0,0.271,0.219,0.489,0.49,0.489h8.962l-1.979,4.773H6.763L4.935,5.343C4.926,5.316,4.897,5.309,4.884,5.286c-0.011-0.024,0-0.051-0.017-0.074C4.833,5.166,4.025,4.081,2.33,3.908C2.068,3.883,1.822,4.075,1.795,4.344C1.767,4.612,1.962,4.853,2.231,4.88c1.143,0.118,1.703,0.738,1.808,0.866l1.91,5.661c0.066,0.199,0.252,0.333,0.463,0.333h8.924c0.116,0,0.22-0.053,0.308-0.128c0.027-0.023,0.042-0.048,0.063-0.076c0.026-0.034,0.063-0.058,0.08-0.099l2.384-5.75c0.062-0.151,0.046-0.323-0.045-0.458C18.036,5.092,17.883,5.011,17.72,5.011z"></path>
-                                <path d="M8.251,12.386c-1.023,0-1.856,0.834-1.856,1.856s0.833,1.853,1.856,1.853c1.021,0,1.853-0.83,1.853-1.853S9.273,12.386,8.251,12.386z M8.251,15.116c-0.484,0-0.877-0.393-0.877-0.874c0-0.484,0.394-0.878,0.877-0.878c0.482,0,0.875,0.394,0.875,0.878C9.126,14.724,8.733,15.116,8.251,15.116z"></path>
-                                <path d="M13.972,12.386c-1.022,0-1.855,0.834-1.855,1.856s0.833,1.853,1.855,1.853s1.854-0.83,1.854-1.853S14.994,12.386,13.972,12.386z M13.972,15.116c-0.484,0-0.878-0.393-0.878-0.874c0-0.484,0.394-0.878,0.878-0.878c0.482,0,0.875,0.394,0.875,0.878C14.847,14.724,14.454,15.116,13.972,15.116z"></path>
-                              </svg>
-                            </div>
-                          </div>
+    <!-- Related items section -->
+    <section class="py-5 bg-light">
+        <div class="container px-4 px-lg-5 mt-5">
+            <h2 class="fw-bolder mb-4">Productos</h2>
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                <!-- Primer conjunto de productos -->
+                <div class="col mb-5 col-lg-3 col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img"></div>
+                        <img src="https://cdn.pixabay.com/photo/2016/04/12/14/08/shoe-1324431_1280.jpg" alt="Product title">
+                        <div class="card-info">
+                            <p class="text-title">sports tennis</p>
+                            <p class="text-body">Calzado deportivo para jugar al fútbol.</p>
                         </div>
-
-                    </div>
-                    <div class="col mb-5">
-                        <div class="card">
-                            <div class="card-img"></div>
-                            <div class="card-info">
-                              <p class="text-title">Product title </p>
-                              <p class="text-body">Product description and details</p>
-                            </div>
-                            <div class="card-footer">
-                            <span class="text-title">$499.49</span>
+                        <div class="card-footer">
+                            <span class="text-title">$1500.00</span>
                             <div class="card-button">
-                              <svg class="svg-icon" viewBox="0 0 20 20">
-                                <path d="M17.72,5.011H8.026c-0.271,0-0.49,0.219-0.49,0.489c0,0.271,0.219,0.489,0.49,0.489h8.962l-1.979,4.773H6.763L4.935,5.343C4.926,5.316,4.897,5.309,4.884,5.286c-0.011-0.024,0-0.051-0.017-0.074C4.833,5.166,4.025,4.081,2.33,3.908C2.068,3.883,1.822,4.075,1.795,4.344C1.767,4.612,1.962,4.853,2.231,4.88c1.143,0.118,1.703,0.738,1.808,0.866l1.91,5.661c0.066,0.199,0.252,0.333,0.463,0.333h8.924c0.116,0,0.22-0.053,0.308-0.128c0.027-0.023,0.042-0.048,0.063-0.076c0.026-0.034,0.063-0.058,0.08-0.099l2.384-5.75c0.062-0.151,0.046-0.323-0.045-0.458C18.036,5.092,17.883,5.011,17.72,5.011z"></path>
-                                <path d="M8.251,12.386c-1.023,0-1.856,0.834-1.856,1.856s0.833,1.853,1.856,1.853c1.021,0,1.853-0.83,1.853-1.853S9.273,12.386,8.251,12.386z M8.251,15.116c-0.484,0-0.877-0.393-0.877-0.874c0-0.484,0.394-0.878,0.877-0.878c0.482,0,0.875,0.394,0.875,0.878C9.126,14.724,8.733,15.116,8.251,15.116z"></path>
-                                <path d="M13.972,12.386c-1.022,0-1.855,0.834-1.855,1.856s0.833,1.853,1.855,1.853s1.854-0.83,1.854-1.853S14.994,12.386,13.972,12.386z M13.972,15.116c-0.484,0-0.878-0.393-0.878-0.874c0-0.484,0.394-0.878,0.878-0.878c0.482,0,0.875,0.394,0.875,0.878C14.847,14.724,14.454,15.116,13.972,15.116z"></path>
-                              </svg>
+                                <svg class="svg-icon" viewBox="0 0 20 20">
+                                    <!-- Icono SVG aquí -->
+                                </svg>
                             </div>
-                          </div>
-                        </div>
-                    </div>
-                    <div class="col mb-5">
-                        <div class="card">
-                            <div class="card-img"></div>
-                            <div class="card-info">
-                              <p class="text-title">Product title </p>
-                              <p class="text-body">Product description and details</p>
-                            </div>
-                            <div class="card-footer">
-                            <span class="text-title">$499.49</span>
-                            <div class="card-button">
-                              <svg class="svg-icon" viewBox="0 0 20 20">
-                                <path d="M17.72,5.011H8.026c-0.271,0-0.49,0.219-0.49,0.489c0,0.271,0.219,0.489,0.49,0.489h8.962l-1.979,4.773H6.763L4.935,5.343C4.926,5.316,4.897,5.309,4.884,5.286c-0.011-0.024,0-0.051-0.017-0.074C4.833,5.166,4.025,4.081,2.33,3.908C2.068,3.883,1.822,4.075,1.795,4.344C1.767,4.612,1.962,4.853,2.231,4.88c1.143,0.118,1.703,0.738,1.808,0.866l1.91,5.661c0.066,0.199,0.252,0.333,0.463,0.333h8.924c0.116,0,0.22-0.053,0.308-0.128c0.027-0.023,0.042-0.048,0.063-0.076c0.026-0.034,0.063-0.058,0.08-0.099l2.384-5.75c0.062-0.151,0.046-0.323-0.045-0.458C18.036,5.092,17.883,5.011,17.72,5.011z"></path>
-                                <path d="M8.251,12.386c-1.023,0-1.856,0.834-1.856,1.856s0.833,1.853,1.856,1.853c1.021,0,1.853-0.83,1.853-1.853S9.273,12.386,8.251,12.386z M8.251,15.116c-0.484,0-0.877-0.393-0.877-0.874c0-0.484,0.394-0.878,0.877-0.878c0.482,0,0.875,0.394,0.875,0.878C9.126,14.724,8.733,15.116,8.251,15.116z"></path>
-                                <path d="M13.972,12.386c-1.022,0-1.855,0.834-1.855,1.856s0.833,1.853,1.855,1.853s1.854-0.83,1.854-1.853S14.994,12.386,13.972,12.386z M13.972,15.116c-0.484,0-0.878-0.393-0.878-0.874c0-0.484,0.394-0.878,0.878-0.878c0.482,0,0.875,0.394,0.875,0.878C14.847,14.724,14.454,15.116,13.972,15.116z"></path>
-                              </svg>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                    <div class="col mb-5">
-                        <div class="card">
-                            <div class="card-img"></div>
-                            <div class="card-info">
-                              <p class="text-title">Product title </p>
-                              <p class="text-body">Product description and details</p>
-                            </div>
-                            <div class="card-footer">
-                            <span class="text-title">$499.49</span>
-                            <div class="card-button">
-                              <svg class="svg-icon" viewBox="0 0 20 20">
-                                <path d="M17.72,5.011H8.026c-0.271,0-0.49,0.219-0.49,0.489c0,0.271,0.219,0.489,0.49,0.489h8.962l-1.979,4.773H6.763L4.935,5.343C4.926,5.316,4.897,5.309,4.884,5.286c-0.011-0.024,0-0.051-0.017-0.074C4.833,5.166,4.025,4.081,2.33,3.908C2.068,3.883,1.822,4.075,1.795,4.344C1.767,4.612,1.962,4.853,2.231,4.88c1.143,0.118,1.703,0.738,1.808,0.866l1.91,5.661c0.066,0.199,0.252,0.333,0.463,0.333h8.924c0.116,0,0.22-0.053,0.308-0.128c0.027-0.023,0.042-0.048,0.063-0.076c0.026-0.034,0.063-0.058,0.08-0.099l2.384-5.75c0.062-0.151,0.046-0.323-0.045-0.458C18.036,5.092,17.883,5.011,17.72,5.011z"></path>
-                                <path d="M8.251,12.386c-1.023,0-1.856,0.834-1.856,1.856s0.833,1.853,1.856,1.853c1.021,0,1.853-0.83,1.853-1.853S9.273,12.386,8.251,12.386z M8.251,15.116c-0.484,0-0.877-0.393-0.877-0.874c0-0.484,0.394-0.878,0.877-0.878c0.482,0,0.875,0.394,0.875,0.878C9.126,14.724,8.733,15.116,8.251,15.116z"></path>
-                                <path d="M13.972,12.386c-1.022,0-1.855,0.834-1.855,1.856s0.833,1.853,1.855,1.853s1.854-0.83,1.854-1.853S14.994,12.386,13.972,12.386z M13.972,15.116c-0.484,0-0.878-0.393-0.878-0.874c0-0.484,0.394-0.878,0.878-0.878c0.482,0,0.875,0.394,0.875,0.878C14.847,14.724,14.454,15.116,13.972,15.116z"></path>
-                              </svg>
-                            </div>
-                          </div>
                         </div>
                     </div>
                 </div>
-                                                {{-- SEGUNDA FILA DE PRODUCTOS --}}
-                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                    <div class="col mb-5">
-                        
-                        <div class="card">
-                            <div class="card-img"></div>
-                            <div class="card-info">
-                              <p class="text-title">Product title </p>
-                              <p class="text-body">Product description and details</p>
-                            </div>
-                            <div class="card-footer">
-                            <span class="text-title">$499.49</span>
-                            <div class="card-button">
-                              <svg class="svg-icon" viewBox="0 0 20 20">
-                                <path d="M17.72,5.011H8.026c-0.271,0-0.49,0.219-0.49,0.489c0,0.271,0.219,0.489,0.49,0.489h8.962l-1.979,4.773H6.763L4.935,5.343C4.926,5.316,4.897,5.309,4.884,5.286c-0.011-0.024,0-0.051-0.017-0.074C4.833,5.166,4.025,4.081,2.33,3.908C2.068,3.883,1.822,4.075,1.795,4.344C1.767,4.612,1.962,4.853,2.231,4.88c1.143,0.118,1.703,0.738,1.808,0.866l1.91,5.661c0.066,0.199,0.252,0.333,0.463,0.333h8.924c0.116,0,0.22-0.053,0.308-0.128c0.027-0.023,0.042-0.048,0.063-0.076c0.026-0.034,0.063-0.058,0.08-0.099l2.384-5.75c0.062-0.151,0.046-0.323-0.045-0.458C18.036,5.092,17.883,5.011,17.72,5.011z"></path>
-                                <path d="M8.251,12.386c-1.023,0-1.856,0.834-1.856,1.856s0.833,1.853,1.856,1.853c1.021,0,1.853-0.83,1.853-1.853S9.273,12.386,8.251,12.386z M8.251,15.116c-0.484,0-0.877-0.393-0.877-0.874c0-0.484,0.394-0.878,0.877-0.878c0.482,0,0.875,0.394,0.875,0.878C9.126,14.724,8.733,15.116,8.251,15.116z"></path>
-                                <path d="M13.972,12.386c-1.022,0-1.855,0.834-1.855,1.856s0.833,1.853,1.855,1.853s1.854-0.83,1.854-1.853S14.994,12.386,13.972,12.386z M13.972,15.116c-0.484,0-0.878-0.393-0.878-0.874c0-0.484,0.394-0.878,0.878-0.878c0.482,0,0.875,0.394,0.875,0.878C14.847,14.724,14.454,15.116,13.972,15.116z"></path>
-                              </svg>
-                            </div>
-                          </div>
+                <div class="col mb-5 col-lg-3 col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img"></div>
+                        <img src="https://cdn.pixabay.com/photo/2016/04/12/15/24/inline-skate-1324585_1280.jpg" alt="Product title">
+                        <div class="card-info">
+                            <p class="text-title">inline skates</p>
+                            <p class="text-body">Patines en linea ideales para calle</p>
                         </div>
-
-                    </div>
-                    <div class="col mb-5">
-                        <div class="card">
-                            <div class="card-img"></div>
-                            <div class="card-info">
-                              <p class="text-title">Product title </p>
-                              <p class="text-body">Product description and details</p>
-                            </div>
-                            <div class="card-footer">
-                            <span class="text-title">$499.49</span>
+                        <div class="card-footer">
+                            <span class="text-title">$850.99</span>
                             <div class="card-button">
-                              <svg class="svg-icon" viewBox="0 0 20 20">
-                                <path d="M17.72,5.011H8.026c-0.271,0-0.49,0.219-0.49,0.489c0,0.271,0.219,0.489,0.49,0.489h8.962l-1.979,4.773H6.763L4.935,5.343C4.926,5.316,4.897,5.309,4.884,5.286c-0.011-0.024,0-0.051-0.017-0.074C4.833,5.166,4.025,4.081,2.33,3.908C2.068,3.883,1.822,4.075,1.795,4.344C1.767,4.612,1.962,4.853,2.231,4.88c1.143,0.118,1.703,0.738,1.808,0.866l1.91,5.661c0.066,0.199,0.252,0.333,0.463,0.333h8.924c0.116,0,0.22-0.053,0.308-0.128c0.027-0.023,0.042-0.048,0.063-0.076c0.026-0.034,0.063-0.058,0.08-0.099l2.384-5.75c0.062-0.151,0.046-0.323-0.045-0.458C18.036,5.092,17.883,5.011,17.72,5.011z"></path>
-                                <path d="M8.251,12.386c-1.023,0-1.856,0.834-1.856,1.856s0.833,1.853,1.856,1.853c1.021,0,1.853-0.83,1.853-1.853S9.273,12.386,8.251,12.386z M8.251,15.116c-0.484,0-0.877-0.393-0.877-0.874c0-0.484,0.394-0.878,0.877-0.878c0.482,0,0.875,0.394,0.875,0.878C9.126,14.724,8.733,15.116,8.251,15.116z"></path>
-                                <path d="M13.972,12.386c-1.022,0-1.855,0.834-1.855,1.856s0.833,1.853,1.855,1.853s1.854-0.83,1.854-1.853S14.994,12.386,13.972,12.386z M13.972,15.116c-0.484,0-0.878-0.393-0.878-0.874c0-0.484,0.394-0.878,0.878-0.878c0.482,0,0.875,0.394,0.875,0.878C14.847,14.724,14.454,15.116,13.972,15.116z"></path>
-                              </svg>
+                                <svg class="svg-icon" viewBox="0 0 20 20">
+                                    <!-- Icono SVG aquí -->
+                                </svg>
                             </div>
-                          </div>
-                        </div>
-                    </div>
-                    <div class="col mb-5">
-                        <div class="card">
-                            <div class="card-img"></div>
-                            <div class="card-info">
-                              <p class="text-title">Product title </p>
-                              <p class="text-body">Product description and details</p>
-                            </div>
-                            <div class="card-footer">
-                            <span class="text-title">$499.49</span>
-                            <div class="card-button">
-                              <svg class="svg-icon" viewBox="0 0 20 20">
-                                <path d="M17.72,5.011H8.026c-0.271,0-0.49,0.219-0.49,0.489c0,0.271,0.219,0.489,0.49,0.489h8.962l-1.979,4.773H6.763L4.935,5.343C4.926,5.316,4.897,5.309,4.884,5.286c-0.011-0.024,0-0.051-0.017-0.074C4.833,5.166,4.025,4.081,2.33,3.908C2.068,3.883,1.822,4.075,1.795,4.344C1.767,4.612,1.962,4.853,2.231,4.88c1.143,0.118,1.703,0.738,1.808,0.866l1.91,5.661c0.066,0.199,0.252,0.333,0.463,0.333h8.924c0.116,0,0.22-0.053,0.308-0.128c0.027-0.023,0.042-0.048,0.063-0.076c0.026-0.034,0.063-0.058,0.08-0.099l2.384-5.75c0.062-0.151,0.046-0.323-0.045-0.458C18.036,5.092,17.883,5.011,17.72,5.011z"></path>
-                                <path d="M8.251,12.386c-1.023,0-1.856,0.834-1.856,1.856s0.833,1.853,1.856,1.853c1.021,0,1.853-0.83,1.853-1.853S9.273,12.386,8.251,12.386z M8.251,15.116c-0.484,0-0.877-0.393-0.877-0.874c0-0.484,0.394-0.878,0.877-0.878c0.482,0,0.875,0.394,0.875,0.878C9.126,14.724,8.733,15.116,8.251,15.116z"></path>
-                                <path d="M13.972,12.386c-1.022,0-1.855,0.834-1.855,1.856s0.833,1.853,1.855,1.853s1.854-0.83,1.854-1.853S14.994,12.386,13.972,12.386z M13.972,15.116c-0.484,0-0.878-0.393-0.878-0.874c0-0.484,0.394-0.878,0.878-0.878c0.482,0,0.875,0.394,0.875,0.878C14.847,14.724,14.454,15.116,13.972,15.116z"></path>
-                              </svg>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                    <div class="col mb-5">
-                        <div class="card">
-                            <div class="card-img"></div>
-                            <div class="card-info">
-                              <p class="text-title">Product title </p>
-                              <p class="text-body">Product description and details</p>
-                            </div>
-                            <div class="card-footer">
-                            <span class="text-title">$499.49</span>
-                            <div class="card-button">
-                              <svg class="svg-icon" viewBox="0 0 20 20">
-                                <path d="M17.72,5.011H8.026c-0.271,0-0.49,0.219-0.49,0.489c0,0.271,0.219,0.489,0.49,0.489h8.962l-1.979,4.773H6.763L4.935,5.343C4.926,5.316,4.897,5.309,4.884,5.286c-0.011-0.024,0-0.051-0.017-0.074C4.833,5.166,4.025,4.081,2.33,3.908C2.068,3.883,1.822,4.075,1.795,4.344C1.767,4.612,1.962,4.853,2.231,4.88c1.143,0.118,1.703,0.738,1.808,0.866l1.91,5.661c0.066,0.199,0.252,0.333,0.463,0.333h8.924c0.116,0,0.22-0.053,0.308-0.128c0.027-0.023,0.042-0.048,0.063-0.076c0.026-0.034,0.063-0.058,0.08-0.099l2.384-5.75c0.062-0.151,0.046-0.323-0.045-0.458C18.036,5.092,17.883,5.011,17.72,5.011z"></path>
-                                <path d="M8.251,12.386c-1.023,0-1.856,0.834-1.856,1.856s0.833,1.853,1.856,1.853c1.021,0,1.853-0.83,1.853-1.853S9.273,12.386,8.251,12.386z M8.251,15.116c-0.484,0-0.877-0.393-0.877-0.874c0-0.484,0.394-0.878,0.877-0.878c0.482,0,0.875,0.394,0.875,0.878C9.126,14.724,8.733,15.116,8.251,15.116z"></path>
-                                <path d="M13.972,12.386c-1.022,0-1.855,0.834-1.855,1.856s0.833,1.853,1.855,1.853s1.854-0.83,1.854-1.853S14.994,12.386,13.972,12.386z M13.972,15.116c-0.484,0-0.878-0.393-0.878-0.874c0-0.484,0.394-0.878,0.878-0.878c0.482,0,0.875,0.394,0.875,0.878C14.847,14.724,14.454,15.116,13.972,15.116z"></path>
-                              </svg>
-                            </div>
-                          </div>
                         </div>
                     </div>
                 </div>
-                                      
+                <div class="col mb-5 col-lg-3 col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img"></div>
+                        <img src="https://cdn.pixabay.com/photo/2016/04/12/14/52/inline-skate-1324496_1280.jpg" alt="Product title">
+                        <div class="card-info">
+                            <p class="text-title">inline skates</p>
+                            <p class="text-body">Patines en linea ideales para calle</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="text-title">$850.99</span>
+                            <div class="card-button">
+                                <svg class="svg-icon" viewBox="0 0 20 20">
+                                    <!-- Icono SVG aquí -->
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repite el código de arriba para 2 productos más -->
             </div>
-        </section>
-        
+        </div>
+    
+    <section class="py-5 bg-light">
+        <div class="container px-4 px-lg-5 mt-5">
+            <h2 class="fw-bolder mb-4"></h2>
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                <!-- Segundo conjunto de productos -->
+                <div class="col mb-5 col-lg-3 col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img"></div>
+                        <img src="https://cdn.pixabay.com/photo/2016/04/12/14/31/backpack-1324445_1280.jpg" alt="Product title">
+                        <div class="card-info">
+                            <p class="text-title">climbing backpack</p>
+                            <p class="text-body">Ideal para las excursiones para facilidad y comodidad </p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="text-title">$600.00</span>
+                            <div class="card-button">
+                                <svg class="svg-icon" viewBox="0 0 20 20">
+                                    <!-- Icono SVG aquí -->
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col mb-5 col-lg-3 col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img"></div>
+                        <img src="https://cdn.pixabay.com/photo/2016/04/12/15/44/helm-1324663_1280.jpg" alt="Product title">
+                        <div class="card-info">
+                            <p class="text-title">safety helmet</p>
+                            <p class="text-body">De util proteccion para esas etapas de aventura</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="text-title">$300.99</span>
+                            <div class="card-button">
+                                <svg class="svg-icon" viewBox="0 0 20 20">
+                                    <!-- Icono SVG aquí -->
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col mb-5 col-lg-3 col-md-4 col-sm-6">
+                  <div class="card">
+                      <div class="card-img"></div>
+                      <img src="https://cdn.pixabay.com/photo/2016/04/12/16/57/tent-1324847_1280.jpg" alt="Product title">
+                      <div class="card-info">
+                          <p class="text-title">
+                            Camping house</p>
+                          <p class="text-body">De mucha importancia para las aventuras en familia o solo</p>
+                      </div>
+                      <div class="card-footer">
+                          <span class="text-title">$2500.00</span>
+                          <div class="card-button">
+                              <svg class="svg-icon" viewBox="0 0 20 20">
+                                  <!-- Icono SVG aquí -->
+                              </svg>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+                
+            </div>
+        </div>
+    </section>
 </body>
 @endsection

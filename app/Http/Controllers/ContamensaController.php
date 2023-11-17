@@ -11,19 +11,24 @@ class ContamensaController extends Controller
     {
         $this->middleware('auth');
     }
-    
+
     public function index()
     {
         $privateKey = file_get_contents(storage_path('app/private.pem'));
 
         $contamensa = Contamensa::all();
-        // $contamensa['contamensa'] = Contamensa::all();
+
         foreach ($contamensa as $conta) {
-            $conta->mensaje = $this->decrypt($conta->mensaje, $privateKey);
-            $conta->correo = $this->decrypt($conta->correo, $privateKey);
+            $conta->mensajeEncriptado = $conta->mensaje;
+            $conta->correoEncriptado = $conta->correo;
+
+            $conta->mensajedes = $this->decrypt($conta->mensaje, $privateKey);
+            $conta->correodes = $this->decrypt($conta->correo, $privateKey);
         }
+
         return view('contamensa.index', compact('contamensa'));
     }
+
 
     private function decrypt($encryptedData, $privateKey)
     {
